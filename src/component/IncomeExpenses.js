@@ -16,7 +16,7 @@ function moneyFormatter(num){
     )
 }
 
-const IncomeExpenses = () => {
+export const IncomeExpenses = () => {
     const { transactions } = useContext(GlobalContext);
 
     const amounts = transactions.map(transaction => transaction.amount);
@@ -31,14 +31,14 @@ const IncomeExpenses = () => {
     <div className='inc-exp-container'>
         <div>
             <h4>Income</h4>
-            <p id='money-plus' className='money plus' >{moneyFormatter(income)}</p>
+            <p  className='money plus' >{moneyFormatter(income)}</p>
        </div>
        <div>
             <h4>Expense</h4>
-            <p id='money-minus' className='money minus'>{moneyFormatter(expense)}</p>
+            <p  className='money minus'>{moneyFormatter(expense)}</p>
        </div>
     </div>
   )
 }
 
-export default IncomeExpenses
+

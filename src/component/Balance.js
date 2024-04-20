@@ -16,7 +16,7 @@ function moneyFormatter(num){
     )
 }
 
-const Balance = () => {
+export const Balance = () => {
     const { transaction } = useContext(GlobalContext);
     const amounts = transaction.map(transaction => transaction.amount);
 
@@ -30,4 +30,3 @@ const Balance = () => {
   )
 }
 
-export default Balance
